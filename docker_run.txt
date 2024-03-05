@@ -1,0 +1,109 @@
+
+C:\Users\User>cd c:/
+
+c:\>cd docker
+
+c:\Docker>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago    18.6MB
+hello-world                latest    d2c94e258dcb   10 months ago   13.3kB
+openjdk                    latest    71260f256d19   13 months ago   470MB
+
+c:\Docker>docker build -t myubuntuimage .
+[+] Building 12.1s (4/6)                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+[+] Building 24.4s (4/6)                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd55544  13.1s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd555449  0.4s
+ => => sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da 1.13kB / 1.13kB                     0.0s
+[+] Building 35.0s (5/6)                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd55544  20.9s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd555449  0.4s
+ => => sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da 1.13kB / 1.13kB                     0.0s
+ => => sha256:81bba8d1dde7fc1883b6e95cd46d6c9f4874374f2b360c8db82620b33f6b5ca1 424B / 424B                         0.0s
+ => => sha256:3db8720ecbf5f5927d409cc61f9b4f7ffe23283917caaa992f847c4d83338cc1 2.30kB / 2.30kB                     0.0s
+ => => sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7 29.54MB / 29.54MB                  14.7s
+ => => extracting sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7                          3.9s
+[+] Building 37.5s (5/6)                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd55544  20.9s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd555449  0.4s
+ => => sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da 1.13kB / 1.13kB                     0.0s
+ => => sha256:81bba8d1dde7fc1883b6e95cd46d6c9f4874374f2b360c8db82620b33f6b5ca1 424B / 424B                         0.0s
+ => => sha256:3db8720ecbf5f5927d409cc61f9b4f7ffe23283917caaa992f847c4d83338cc1 2.30kB / 2.30kB                     0.0s
+ => => sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7 29.54MB / 29.54MB                  14.7s
+ => => extracting sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7                          3.9s
+[+] Building 39.7s (5/6)                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd55544  20.9s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd555449  0.4s
+ => => sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da 1.13kB / 1.13kB                     0.0s
+ => => sha256:81bba8d1dde7fc1883b6e95cd46d6c9f4874374f2b360c8db82620b33f6b5ca1 424B / 424B                         0.0s
+ => => sha256:3db8720ecbf5f5927d409cc61f9b4f7ffe23283917caaa992f847c4d83338cc1 2.30kB / 2.30kB                     0.0s
+ => => sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7 29.54MB / 29.54MB                  14.7s
+ => => extracting sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7                          3.9s
+ => [2/2] RUN apt update                                                                                           7.5s
+[+] Building 108.1s (7/7) FINISHED                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                               0.7s
+ => => transferring dockerfile: 127B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.9s
+ => => transferring context: 383B                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd55544  20.9s
+ => => resolve docker.io/library/ubuntu:latest@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd555449  0.4s
+ => => sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da 1.13kB / 1.13kB                     0.0s
+ => => sha256:81bba8d1dde7fc1883b6e95cd46d6c9f4874374f2b360c8db82620b33f6b5ca1 424B / 424B                         0.0s
+ => => sha256:3db8720ecbf5f5927d409cc61f9b4f7ffe23283917caaa992f847c4d83338cc1 2.30kB / 2.30kB                     0.0s
+ => => sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7 29.54MB / 29.54MB                  14.7s
+ => => extracting sha256:01007420e9b005dc14a8c8b0f996a2ad8e0d4af6c3d01e62f123be14fe48eec7                          3.9s
+ => [2/2] RUN apt update                                                                                          74.4s
+ => exporting to image                                                                                             0.5s
+ => => exporting layers                                                                                            0.4s
+ => => writing image sha256:e5714515a0cd45c57189d426b487d603332ca871f90f164e0062925d445f2d9b                       0.0s
+ => => naming to docker.io/library/myubuntuimage                                                                   0.1s
+
+View build details: docker-desktop://dashboard/build/default/default/w5pb03n4zmrmvl55iev43enib
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+
+c:\Docker>
+c:\Docker>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+myubuntuimage              latest    e5714515a0cd   25 seconds ago   127MB
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago     18.6MB
+hello-world                latest    d2c94e258dcb   10 months ago    13.3kB
+openjdk                    latest    71260f256d19   13 months ago    470MB
+
+c:\Docker>docker run --name myUbuntuContainer myubuntuimage
+This is First Docker Files!
+
+c:\Docker>

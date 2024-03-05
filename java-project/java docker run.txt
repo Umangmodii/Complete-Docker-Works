@@ -1,0 +1,66 @@
+
+c:\Docker>mkdir java-project
+
+c:\Docker>cd java-project
+
+c:\Docker\java-project>docker build -t myjavaimage .
+[+] Building 149.9s (10/10) FINISHED                                                                                                                         docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                   0.5s
+ => => transferring dockerfile: 151B                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/openjdk:11                                                                                                          5.8s
+ => [auth] library/openjdk:pull token for registry-1.docker.io                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                      0.3s
+ => => transferring context: 2B                                                                                                                                        0.0s
+ => [1/4] FROM docker.io/library/openjdk:11@sha256:99bac5bf83633e3c7399aed725c8415e7b569b54e03e4599e580fc9cdb7c21ab                                                  132.0s
+ => => resolve docker.io/library/openjdk:11@sha256:99bac5bf83633e3c7399aed725c8415e7b569b54e03e4599e580fc9cdb7c21ab                                                    0.2s
+ => => sha256:99bac5bf83633e3c7399aed725c8415e7b569b54e03e4599e580fc9cdb7c21ab 1.04kB / 1.04kB                                                                         0.0s
+ => => sha256:e81b7f317654b0f26d3993e014b04bcb29250339b11b9de41e130feecd4cd43c 1.79kB / 1.79kB                                                                         0.0s
+ => => sha256:47a932d998b743b9b0bcce55aa8ede77de94a6a183c8a67dec9d5e3b8ce0faa7 6.26kB / 6.26kB                                                                         0.0s
+ => => sha256:2068746827ec1b043b571e4788693eab7e9b2a95301176512791f8c317a2816a 10.88MB / 10.88MB                                                                      11.3s
+ => => sha256:001c52e26ad57e3b25b439ee0052f6692e5c0f2d5d982a00a8819ace5e521452 55.00MB / 55.00MB                                                                      51.1s
+ => => sha256:d9d4b9b6e964657da49910b495173d6c4f0d9bc47b3b44273cf82fd32723d165 5.16MB / 5.16MB                                                                         6.6s
+ => => sha256:9daef329d35093868ef75ac8b7c6eb407fa53abbcb3a264c218c2ec7bca716e6 54.58MB / 54.58MB                                                                      55.7s
+ => => sha256:d85151f15b6683b98f21c3827ac545188b1849efb14a1049710ebc4692de3dd5 5.42MB / 5.42MB                                                                        22.7s
+ => => sha256:66223a710990a0ae7162aeed80417d30303afa3f24aafa57aa30348725e2230b 213B / 213B                                                                            23.4s
+ => => sha256:db38d58ec8ab4111b072f6700f978a51985acd252aabce3be377f25162e68301 202.07MB / 202.07MB                                                                   120.3s
+ => => extracting sha256:001c52e26ad57e3b25b439ee0052f6692e5c0f2d5d982a00a8819ace5e521452                                                                             10.0s
+ => => extracting sha256:d9d4b9b6e964657da49910b495173d6c4f0d9bc47b3b44273cf82fd32723d165                                                                              0.6s
+ => => extracting sha256:2068746827ec1b043b571e4788693eab7e9b2a95301176512791f8c317a2816a                                                                              0.7s
+ => => extracting sha256:9daef329d35093868ef75ac8b7c6eb407fa53abbcb3a264c218c2ec7bca716e6                                                                              8.4s
+ => => extracting sha256:d85151f15b6683b98f21c3827ac545188b1849efb14a1049710ebc4692de3dd5                                                                              1.0s
+ => => extracting sha256:66223a710990a0ae7162aeed80417d30303afa3f24aafa57aa30348725e2230b                                                                              0.0s
+ => => extracting sha256:db38d58ec8ab4111b072f6700f978a51985acd252aabce3be377f25162e68301                                                                              8.7s
+ => [internal] load build context                                                                                                                                      0.4s
+ => => transferring context: 312B                                                                                                                                      0.0s
+ => [2/4] WORKDIR /usr/src/myapp                                                                                                                                       1.4s
+ => [3/4] COPY . /usr/src/myapp/                                                                                                                                       0.5s
+ => [4/4] RUN  javac Test.java                                                                                                                                         4.1s
+ => exporting to image                                                                                                                                                 2.1s
+ => => exporting layers                                                                                                                                                1.9s
+ => => writing image sha256:6e9c794c25843a7d706dfa85528417ee95e7ce618e5e2eccebfc1d26de9e8909                                                                           0.1s
+ => => naming to docker.io/library/myjavaimage                                                                                                                         0.1s
+
+View build details: docker-desktop://dashboard/build/default/default/3fk6i5ec6xejud89iqz2wb68n
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+
+c:\Docker\java-project>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+myjavaimage                latest    6e9c794c2584   20 seconds ago   654MB
+myubuntuimage              latest    e5714515a0cd   20 minutes ago   127MB
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago     18.6MB
+hello-world                latest    d2c94e258dcb   10 months ago    13.3kB
+openjdk                    latest    71260f256d19   13 months ago    470MB
+
+c:\Docker\java-project>docker ps
+CONTAINER ID   IMAGE     COMMAND    CREATED          STATUS          PORTS     NAMES
+06245ab59250   openjdk   "jshell"   42 minutes ago   Up 42 minutes             openjdkContainer1
+
+c:\Docker\java-project>
+c:\Docker\java-project>docker run --name java-project myjavaimage
+Hello, World!
+
+c:\Docker\java-project>
+c:\Docker\java-project>
+c:\Docker\java-project>

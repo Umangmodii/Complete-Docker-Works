@@ -1,0 +1,152 @@
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\Docker>dockor --version
+'dockor' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\Docker>docker --version
+Docker version 25.0.3, build 4debf41
+
+C:\Program Files\Docker>doclor pull hello-world
+'doclor' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\Docker>docker pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:d000bc569937abbe195e20322a0bde6b2922d805332fd6d8a68b19f524b7d21d
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview hello-world
+
+C:\Program Files\Docker>docker pull openjdk
+Using default tag: latest
+latest: Pulling from library/openjdk
+197c1adcd755: Pull complete
+57b698b7af4b: Pull complete
+95a27dbe0150: Pull complete
+Digest: sha256:9b448de897d211c9e0ec635a485650aed6e28d4eca1efbc34940560a480b3f1f
+Status: Downloaded newer image for openjdk:latest
+docker.io/library/openjdk:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview openjdk
+
+C:\Program Files\Docker>dockor images
+'dockor' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\Docker>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago    18.6MB
+hello-world                latest    d2c94e258dcb   10 months ago   13.3kB
+openjdk                    latest    71260f256d19   13 months ago   470MB
+
+C:\Program Files\Docker>docker search MySql
+NAME                            DESCRIPTION                                     STARS     OFFICIAL
+mariadb                         MariaDB Server is a high performing open sou…   5689      [OK]
+percona                         Percona Server is a fork of the MySQL relati…   625       [OK]
+mysql                           MySQL is a widely used, open-source relation…   14900     [OK]
+phpmyadmin                      phpMyAdmin - A web interface for MySQL and M…   952       [OK]
+bitnami/mysql                   Bitnami MySQL Docker Image                      107
+bitnami/mysqld-exporter                                                         6
+cimg/mysql                                                                      3
+ubuntu/mysql                    MySQL open source fast, stable, multi-thread…   61
+rapidfort/mysql                 RapidFort optimized, hardened image for MySQL   25
+rapidfort/mysql8-ib             RapidFort optimized, hardened image for MySQ…   9
+google/mysql                    MySQL server for Google Compute Engine          25
+elestio/mysql                   Mysql, verified and packaged by Elestio         0
+rapidfort/mysql-official        RapidFort optimized, hardened image for MySQ…   9
+bitnamicharts/mysql                                                             0
+hashicorp/mysql-portworx-demo                                                   0
+databack/mysql-backup           Back up mysql databases to... anywhere!         109
+linuxserver/mysql               A Mysql container, brought to you by LinuxSe…   41
+mirantis/mysql                                                                  0
+docksal/mysql                   MySQL service images for Docksal - https://d…   0
+linuxserver/mysql-workbench                                                     55
+vitess/mysqlctld                vitess/mysqlctld                                1
+eclipse/mysql                   Mysql 5.7, curl, rsync                          1
+drupalci/mysql-5.5              https://www.drupal.org/project/drupalci         3
+drupalci/mysql-5.7              https://www.drupal.org/project/drupalci         0
+datajoint/mysql                 MySQL image pre-configured to work smoothly …   2
+
+C:\Program Files\Docker>
+C:\Program Files\Docker>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago    18.6MB
+hello-world                latest    d2c94e258dcb   10 months ago   13.3kB
+openjdk                    latest    71260f256d19   13 months ago   470MB
+
+C:\Program Files\Docker>
+C:\Program Files\Docker>docker run openjdk
+Mar 05, 2024 5:11:28 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+|  Welcome to JShell -- Version 18.0.2.1
+|  For an introduction type: /help intro
+
+jshell>
+C:\Program Files\Docker>
+C:\Program Files\Docker>docker run openjdk
+Mar 05, 2024 5:11:40 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+|  Welcome to JShell -- Version 18.0.2.1
+|  For an introduction type: /help intro
+
+jshell>
+C:\Program Files\Docker>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Program Files\Docker>docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+90ccd8b24bb6   openjdk       "jshell"   19 seconds ago   Exited (0) 12 seconds ago             intelligent_lumiere
+4f0ab26dc487   openjdk       "jshell"   30 seconds ago   Exited (0) 25 seconds ago             fervent_dijkstra
+94f840bd1213   hello-world   "/hello"   14 minutes ago   Exited (0) 7 minutes ago              focused_rubin
+
+C:\Program Files\Docker>docker run -name openjdkContainer1 -it -d openjdk
+unknown shorthand flag: 'n' in -name
+See 'docker run --help'.
+
+C:\Program Files\Docker>
+C:\Program Files\Docker>docker run --name openjdkContainer1 -it -d openjdk
+06245ab592504d0471ff2e084b868602d5cf816bf4d5fb42cd275eff238f489c
+
+C:\Program Files\Docker>docker ps
+CONTAINER ID   IMAGE     COMMAND    CREATED         STATUS         PORTS     NAMES
+06245ab59250   openjdk   "jshell"   5 seconds ago   Up 4 seconds             openjdkContainer1
+
+C:\Program Files\Docker>docker exec -it 06245ab59250 openjdk
+OCI runtime exec failed: exec failed: unable to start container process: exec: "openjdk": executable file not found in $PATH: unknown
+
+C:\Program Files\Docker>docker exec -it 06245ab59250 openjdks
+OCI runtime exec failed: exec failed: unable to start container process: exec: "openjdks": executable file not found in $PATH: unknown
+
+C:\Program Files\Docker>docker exec -it javaContainer1 jshell
+Error response from daemon: No such container: javaContainer1
+
+C:\Program Files\Docker>docker exec -it    openjdkContainer1 jshell
+|  Welcome to JShell -- Version 18.0.2.1
+|  For an introduction type: /help intro
+
+jshell> System.out.println("Hello Umang!")
+Hello Umang!
+
+jshell> str.length()
+|  Error:
+|  cannot find symbol
+|    symbol:   variable str
+|  str.length()
+|  ^-^
+
+jshell> String str = "Umang"
+str ==> "Umang"
+
+jshell> str.length()
+$3 ==> 5
+
+jshell> /exit
+|  Goodbye
+
+C:\Program Files\Docker>
